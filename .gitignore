@@ -1,0 +1,7 @@
+# compiled output
+portscan
+*.o
+*.dSYM/
+
+# macOS clutter
+.DS_Store
