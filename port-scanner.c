@@ -53,11 +53,11 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
     char tIP[16] = {0};
-    strcpy(tIP, argv[1]); //Copies the IPv4 address
+    strcpy(tIP, argv[1]);
     char First_Port[6] = {0};
-    strcpy(First_Port, argv[2]); //Copies the start port
+    strcpy(First_Port, argv[2]);
     char Last_Port[6] = {0};
-    strcpy(Last_Port, argv[3]); //Copies the end port
+    strcpy(Last_Port, argv[3]);
 
     //Start port scanner
     port_scanner(tIP, First_Port, Last_Port);
