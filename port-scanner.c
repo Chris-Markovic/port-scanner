@@ -47,17 +47,17 @@ void port_scanner(char *tIP, char *First_Port, char *Last_Port){
 
 
 int main(int argc, char *argv[]) {
-    if (argc < 4){
+    if (argc != 4){
         printf("Please enter a valid server IP address and range of ports to be scanned.");
         printf("USAGE: %s IPv4 First_Port Last_Port\n", argv[0]);
         exit(1);
     }
     char tIP[16] = {0};
-    strcpy(tIP, argv[1]);
+    snprintf(tIP, sizeof(tIP), "%s", argv[1]);
     char First_Port[6] = {0};
-    strcpy(First_Port, argv[2]);
+    snprintf(First_Port, sizeof(First_Port), "%s", argv[2]);
     char Last_Port[6] = {0};
-    strcpy(Last_Port, argv[3]);
+    snprintf(Last_Port, sizeof(Last_Port), "%s", argv[3]);
 
     //Start port scanner
     port_scanner(tIP, First_Port, Last_Port);
